@@ -27,27 +27,35 @@ export default function Navigation() {
           {/* ロゴ */}
           <div className="flex items-center">
             <Link href="/" className="hover:opacity-80 transition-opacity">
-              {/* PC用ロゴ */}
-              <div className="hidden sm:block">
-                <Image
-                  src="/images/logo-pc.png"
-                  alt="古窯グループ"
-                  width={200}
-                  height={60}
-                  className="h-12 w-auto"
-                  priority
-                />
-              </div>
-              {/* モバイル用ロゴ */}
-              <div className="sm:hidden">
-                <Image
-                  src="/images/logo-sp.png"
-                  alt="古窯グループ"
-                  width={120}
-                  height={40}
-                  className="h-8 w-auto"
-                  priority
-                />
+              <div className="flex flex-col">
+                {/* PC用ロゴ */}
+                <div className="hidden sm:block">
+                  <Image
+                    src="/images/logo-pc.png"
+                    alt="古窯グループ"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto"
+                    priority
+                  />
+                  <p className="text-xs text-gray-600 mt-1 leading-tight">
+                    山形の旅館・レストラン【古窯グループ】
+                  </p>
+                </div>
+                {/* モバイル用ロゴ */}
+                <div className="sm:hidden">
+                  <Image
+                    src="/images/logo-sp.png"
+                    alt="古窯グループ"
+                    width={120}
+                    height={40}
+                    className="h-8 w-auto"
+                    priority
+                  />
+                  <p className="text-xs text-gray-600 mt-1 leading-tight">
+                    山形の旅館・レストラン
+                  </p>
+                </div>
               </div>
             </Link>
           </div>
