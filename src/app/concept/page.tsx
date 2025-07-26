@@ -1,180 +1,199 @@
-// src/app/concept/page.tsx
+// src/app/concept/page.tsx - 元サイト準拠版
+import Image from 'next/image';
+
 export const metadata = {
   title: '私たちの想い | 古窯グループ',
-  description: '古窯グループの理念、想い、山形への愛情をお伝えします。',
+  description: '古窯グループの理念、想い、山形への愛情をお伝えします。山形の文化に生まれた誇り、素朴で美しい暮らしを国内外へ発信していきます。',
 };
 
 export default function ConceptPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* ヒーローセクション */}
-      <section 
-        className="relative h-96 flex items-center justify-center text-white"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1545239351-1141bd82e8a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="text-center max-w-4xl px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            私たちの想い
+    <div className="min-h-screen bg-white">
+      {/* ヘッダー画像セクション */}
+      <section className="relative h-[60vh] flex items-center justify-center">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/contact_main.jpg"
+            alt="私たちの想い"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div className="relative z-10 text-center text-white max-w-4xl px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+            私たちは<br />
+            山形の文化に生まれた誇り、<br />
+            <span className="text-yellow-300">素朴で</span><br />
+            <span className="text-yellow-300">美しい暮らしを</span><br />
+            国内外へ発信していきます。
           </h1>
-          <p className="text-xl md:text-2xl font-light">
-            山形の美しい農村文化を世界に届ける
-          </p>
         </div>
       </section>
 
-      {/* メインコンセプト */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              私たちの使命
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                私たち古窯グループは、山形が誇る農村文化の良さ、
-                素朴で美しい里山の暮らしを日本・世界中に広げるために、
-                個性ある目的地を創造いたします。
-              </p>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                そして、私たちと想いを共有できる山形ファンが集まる世界を作ります。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3つの価値観 */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            私たちが大切にする3つの価値観
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                お客様の喜びを我が喜びとする
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                お客様一人ひとりの感動と喜びが、私たちの最大の誇りです。
-                心からのおもてなしで、特別な時間を提供します。
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                山形の魅力を伝えるパフォーマー
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                働くメンバー一人一人が山形の魅力を伝える役割を担い、
-                山形で働くこと自体が山形のファンを増やすことにつながります。
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                持続可能な地域づくり
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                地域の文化と自然を大切にしながら、
-                次世代に美しい山形を残すための取り組みを続けます。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 山形への想い */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                山形という地域への深い愛情
-              </h2>
-              <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  この土地ならではの人、風景、食べ物、この土地での様々な体験が
-                  お客様の感動につながるため、私達は自信を持って山形の魅力を提供し、
-                  どうすれば上手に伝わるかを常々考え仕事をしています。
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  山形の地で楽しく働くことそのものが、
-                  自然とお客様の感動や喜びに変わっていく。
-                  これが私たちの目指す理想の姿です。
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  様々な職種が集まり協力して一つのサービスを提供する
-                  古窯グループの取り組みを通じて、山形の価値を高め続けます。
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-gray-500">山形の風景写真エリア</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 受賞歴 */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            受賞歴・評価
-          </h2>
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="mb-6">
-              <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                日本ツーリズム・オブ・ザ・イヤー 2023
-              </h3>
-              <p className="text-xl text-yellow-600 font-semibold mb-4">
-                グランプリ（最優秀賞）受賞
-              </p>
-              <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                山形のファンを作るための魅力作りや発信を積極的に行う
-                多角的な取り組みが認められ、最高位の賞をいただきました。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-blue-600 text-white">
+      {/* メインメッセージ */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            一緒に山形の魅力を伝えませんか
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
+              私たち古窯グループは、山形が誇る農村文化の良さ、<br />
+              素朴で美しい里山の暮らしを日本・世界中に広げるために、<br />
+              個性ある目的地を創造いたします。
+            </p>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+              そして、私たちと想いを共有できる山形ファンが集まる世界を作ります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5つの価値観 */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="space-y-16">
+            {/* 01 Y-Proud */}
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center mb-6">
+                  <span className="text-6xl font-bold text-blue-600 mr-6">01</span>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                      山形の地に誇りを持つ。
+                    </h2>
+                    <p className="text-xl text-blue-600 font-semibold">Y-Proud</p>
+                  </div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  私たちは山形という土地に深い誇りを持ち、この地域の素晴らしさを
+                  心から信じています。四季折々の美しい自然、豊かな食文化、
+                  温かい人々との出会いが、私たちの原動力となっています。
+                </p>
+              </div>
+              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
+                <p className="text-gray-600">山形の風景画像エリア</p>
+              </div>
+            </div>
+
+            {/* 02 Y-Discover */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center mb-6">
+                  <span className="text-6xl font-bold text-green-600 mr-6">02</span>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                      山形の魅力を日々探す。
+                    </h2>
+                    <p className="text-xl text-green-600 font-semibold">Y-Discover</p>
+                  </div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  山形には、まだ知られていない素晴らしい魅力がたくさん眠っています。
+                  私たちは常にアンテナを張り、新しい発見を求めて地域を歩き回り、
+                  隠れた宝物を見つけ出すことに情熱を注いでいます。
+                </p>
+              </div>
+              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center">
+                <p className="text-gray-600">発見の風景画像エリア</p>
+              </div>
+            </div>
+
+            {/* 03 Y-Learn */}
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center mb-6">
+                  <span className="text-6xl font-bold text-orange-600 mr-6">03</span>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                      最高の山形を学び続ける。
+                    </h2>
+                    <p className="text-xl text-orange-600 font-semibold">Y-Learn</p>
+                  </div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  山形の歴史、文化、自然について、私たちは学び続けます。
+                  地域の先人たちから受け継がれた知恵や技術を理解し、
+                  それを現代に活かす方法を常に模索しています。
+                </p>
+              </div>
+              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg flex items-center justify-center">
+                <p className="text-gray-600">学びの風景画像エリア</p>
+              </div>
+            </div>
+
+            {/* 04 Y-Create */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center mb-6">
+                  <span className="text-6xl font-bold text-purple-600 mr-6">04</span>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                      農村文化を現代的に<br />デザインする。
+                    </h2>
+                    <p className="text-xl text-purple-600 font-semibold">Y-Create</p>
+                  </div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  伝統的な農村文化の価値を大切にしながらも、現代のライフスタイルに
+                  マッチする形でアレンジし、新しい魅力を創造します。
+                  古き良きものと新しい感性の融合を目指しています。
+                </p>
+              </div>
+              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center">
+                <p className="text-gray-600">創造の風景画像エリア</p>
+              </div>
+            </div>
+
+            {/* 05 Y-Experience */}
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center mb-6">
+                  <span className="text-6xl font-bold text-red-600 mr-6">05</span>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                      山形の物語を演出し、<br />体験してもらう。
+                    </h2>
+                    <p className="text-xl text-red-600 font-semibold">Y-Experience</p>
+                  </div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  山形の魅力を単に伝えるだけでなく、お客様に実際に体験していただける
+                  形で提供します。五感で感じ、心に残る物語を演出し、
+                  山形の素晴らしさを全身で感じていただけるよう努めています。
+                </p>
+              </div>
+              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center">
+                <p className="text-gray-600">体験の風景画像エリア</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA セクション */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            一緒に山形の魅力を世界に届けませんか
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            私たちと想いを共有し、山形の素晴らしさを世界に届ける仲間を募集しています。
+          <p className="text-xl mb-8 opacity-90 leading-relaxed">
+            私たちと同じ想いを共有し、山形の素晴らしさを伝える仲間を募集しています。<br />
+            あなたも山形ファンの輪を広げる一員になりませんか。
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            お問い合わせ・採用情報
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              お問い合わせ
+            </a>
+            <a
+              href="/company"
+              className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+            >
+              会社概要
+            </a>
+          </div>
         </div>
       </section>
     </div>
