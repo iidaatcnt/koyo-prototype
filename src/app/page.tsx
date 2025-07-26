@@ -54,62 +54,49 @@ export default async function Home() {
       </section>
 
       {/* 企業理念セクション */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              山形という地域そのものを商品として
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                私達はこれまで"山形"という地域そのものを商品として、この地域の良さを発信し、
-                山形の価値を高めたいという強い想いで仕事をしています。
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                この土地ならではの人、風景、食べ物、この土地での様々な体験がお客様の感動につながるため、
-                私達は自信を持って山形の魅力を提供し、どうすれば上手に伝わるかを常々考え仕事をしています。
-              </p>
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* 左側：画像コラージュ */}
+            <div className="relative">
+              <img 
+                src="/images/img_intr.jpg" 
+                alt="山形の地で働く私たちの想い" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 事業内容セクション */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            私たちの事業
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="h-64 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300">
-                <span className="text-4xl font-bold text-white">泊まる</span>
+            {/* 右側：テキストコンテンツ */}
+            <div className="space-y-8">
+              {/* キャッチコピー */}
+              <div className="border-2 border-gray-300 p-6 text-center bg-gray-50">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
+                  山形の地で楽しく働くことそのものが、<br />
+                  自然とお客様の感動や喜びに変わっていく。
+                </h2>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">宿泊事業</h3>
-              <p className="text-gray-600 leading-relaxed">
-                山形の自然と温泉を活かした旅館・ホテルで、
-                お客様に心からくつろいでいただける空間を提供します。
-              </p>
-            </div>
-            <div className="text-center group">
-              <div className="h-64 bg-gradient-to-br from-green-500 to-green-600 rounded-lg mb-6 flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300">
-                <span className="text-4xl font-bold text-white">味わう</span>
+
+              {/* メインテキスト */}
+              <div className="space-y-4">
+                <p className="text-gray-700 leading-relaxed">
+                  私達はこれまで"山形"という地域そのものを商品として、この地域の良さを発信し、
+                  山形の価値を高めたいという強い想いで仕事をしています。
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  この土地ならではの人、風景、食べ物、この土地での様々な体験がお客様の感動につながるため、
+                  私達は自信を持って山形の魅力を提供し、どうすれば上手に伝わるかを常々考え仕事をしています。
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">レストラン事業</h3>
-              <p className="text-gray-600 leading-relaxed">
-                山形の豊かな食材を活かした料理で、
-                地域の味覚と文化をお客様にお届けします。
-              </p>
-            </div>
-            <div className="text-center group">
-              <div className="h-64 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg mb-6 flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300">
-                <span className="text-4xl font-bold text-white">体験する</span>
+
+              {/* ボタン */}
+              <div className="pt-4">
+                <Link
+                  href="/concept"
+                  className="inline-block bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors"
+                >
+                  私たちの想い
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">体験事業</h3>
-              <p className="text-gray-600 leading-relaxed">
-                山形ならではの文化や自然を体験できる
-                多彩なプログラムをご用意しています。
-              </p>
             </div>
           </div>
         </div>
@@ -432,4 +419,4 @@ export default async function Home() {
       </section>
     </div>
   );
-} 
+}
