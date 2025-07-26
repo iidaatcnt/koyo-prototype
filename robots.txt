@@ -1,0 +1,23 @@
+# robots.txt for koyo-prototype.vercel.app
+# 古窯グループ公式サイト
+
+User-agent: *
+Allow: /
+
+# サイトマップの場所を指定
+Sitemap: https://koyo-prototype.vercel.app/sitemap.xml
+
+# 不要なページをクロール対象外に
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_vercel/
+Disallow: /admin/
+
+# 重要ページは明示的に許可
+Allow: /
+Allow: /news
+Allow: /news/*
+Allow: /company
+Allow: /recruit
+Allow: /contact
+Allow: /concept
