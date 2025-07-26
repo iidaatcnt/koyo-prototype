@@ -121,82 +121,130 @@ export default async function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
             グループ施設
           </h2>
-          <p className="text-center text-gray-600 mb-16">Group Facility</p>
+          <p className="text-center text-gray-600 mb-16 italic">Group facility</p>
 
           {/* 泊まる施設 */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">泊まる</span>
+              <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">🔸泊まる</span>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* 日本の宿 古窯 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  src="/images/img_koyo.jpg" 
                   alt="日本の宿 古窯" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">日本の宿 古窯</h4>
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹日本の宿 古窯（こよう）</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">伝統が薫るおもてなしの宿</h5>
                   <p className="text-gray-600 text-sm mb-4">
-                    40年連続トップ10受賞の老舗旅館。蔵王連峰を望む展望露天風呂と
-                    山形の食材を活かした会席料理が自慢です。
+                    プロが選ぶ旅館百選TOP10に選ばれ続けるおもてなしの温泉宿。
+                    温泉の泉質は「三大美人泉質」として知られています。
                   </p>
-                  <div className="text-xs text-gray-500">
-                    山形県上山市 | かみのやま温泉
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://www.koyoga.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
                   </div>
                 </div>
               </div>
 
+              {/* 悠湯の郷 ゆさ */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  src="/images/img_yusa.jpg" 
+                  alt="悠湯の郷 ゆさ" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹悠湯の郷 ゆさ＆おふろcafé yusa</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">蔵王連峰の雄大な姿を臨む絶景</h5>
+                  <p className="text-gray-600 text-sm mb-4">
+                    蔵王連峰の雄大な姿を臨む絶景大浴場が自慢の宿。
+                    旅館の温かさとホテルの快適さをテーマに安らぎのひとときを提供致します。
+                  </p>
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://www.dosayusa.jp/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* おやど 森の音 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="/images/img_mori.jpg" 
                   alt="おやど 森の音" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">おやど 森の音</h4>
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹山形県 おやど 森の音</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">今日はここで、深呼吸</h5>
                   <p className="text-gray-600 text-sm mb-4">
-                    森に囲まれた静寂な宿。自然の音色に包まれながら、
-                    心身ともにリフレッシュできる空間をご提供します。
+                    緩やかな坂の上、木製の重い扉を開くと、目に飛び込む中庭の光。
+                    豊かな自然、いのちを癒す宿をどうぞ思いのまま、お愉しみください。
                   </p>
-                  <div className="text-xs text-gray-500">
-                    山形県上山市 | かみのやま温泉
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://mori-ne.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
                   </div>
                 </div>
               </div>
 
+              {/* あつみ温泉 萬国屋 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                  alt="古窯別館" 
+                  src="/images/img_ban.jpg" 
+                  alt="あつみ温泉 萬国屋" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">古窯別館</h4>
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹山形県 あつみ温泉 萬国屋</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">創業三百余年の歴史を持つ老舗旅館</h5>
                   <p className="text-gray-600 text-sm mb-4">
-                    モダンと伝統が融合した新しいスタイルの宿。
-                    若い世代にも愛される上質な和のおもてなし。
+                    温海岳や温海川など、あつみの自然に囲まれた萬国屋。
+                    松尾芭蕉、与謝野晶子など文人墨客が数多く訪れ、詩歌や小説にうたわれました。
                   </p>
-                  <div className="text-xs text-gray-500">
-                    山形県上山市 | かみのやま温泉
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                  alt="山形グランドホテル" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">山形グランドホテル</h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    山形市内中心部に位置するシティホテル。
-                    ビジネスにも観光にも便利な立地です。
-                  </p>
-                  <div className="text-xs text-gray-500">
-                    山形県山形市 | 市内中心部
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://www.bankokuya.jp/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
                   </div>
                 </div>
               </div>
@@ -206,23 +254,34 @@ export default async function Home() {
           {/* 味わう施設 */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg">味わう</span>
+              <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg">🔸味わう</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                  alt="レストラン古窯" 
+                  src="/images/img_prin.jpg" 
+                  alt="山形県初のプリン専門店" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">レストラン古窯</h4>
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹山形県初のプリン専門店</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">新鮮素材を使用したプリン専門店</h5>
                   <p className="text-gray-600 text-sm mb-4">
-                    山形の季節の食材を活かした創作料理を、洗練された空間で。
-                    特別な日のお食事にもおすすめです。
+                    地元かみのやまで、山形県産の素材を活かした「美味しいスイーツをつくりたい」
+                    という想いから菓子づくりが始まりました。
                   </p>
-                  <div className="text-xs text-gray-500">
-                    山形県上山市 | 創作和食・会席料理
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://yamagata-purin.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
                   </div>
                 </div>
               </div>
@@ -232,23 +291,34 @@ export default async function Home() {
           {/* 体験する施設 */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              <span className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg">体験する</span>
+              <span className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg">🔸体験する</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                  alt="楽焼き体験工房" 
+                  src="/images/img_wedd.jpg" 
+                  alt="古窯ウエディング" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">楽焼き体験工房</h4>
+                  <h4 className="text-lg font-semibold text-gray-700 mb-1">🔹古窯ウエディング</h4>
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">雅楽の音色が鳴り響く、神前式場</h5>
                   <p className="text-gray-600 text-sm mb-4">
-                    1300年前の須恵器の窯跡がある古窯で、伝統の楽焼き体験。
-                    世界に一つだけの作品を作りませんか。
+                    日本の伝統美を体感する雰囲気たっぷりの和風ウェディング。
+                    和風旅館ならではの落ち着いた結婚式は、ゲストにも大好評です。
                   </p>
-                  <div className="text-xs text-gray-500">
-                    山形県上山市 | 伝統工芸体験
+                  <div className="flex gap-2 mt-4">
+                    <a 
+                      href="https://www.koyoga.com/wedding/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition-colors"
+                    >
+                      施設サイト
+                    </a>
+                    <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition-colors">
+                      MAP
+                    </button>
                   </div>
                 </div>
               </div>
@@ -362,4 +432,4 @@ export default async function Home() {
       </section>
     </div>
   );
-}
+} 
