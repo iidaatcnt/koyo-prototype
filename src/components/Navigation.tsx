@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +26,29 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           {/* ロゴ */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-              古窯グループ
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              {/* PC用ロゴ */}
+              <div className="hidden sm:block">
+                <Image
+                  src="/images/logo-pc.png"
+                  alt="古窯グループ"
+                  width={200}
+                  height={60}
+                  className="h-12 w-auto"
+                  priority
+                />
+              </div>
+              {/* モバイル用ロゴ */}
+              <div className="sm:hidden">
+                <Image
+                  src="/images/logo-sp.png"
+                  alt="古窯グループ"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
