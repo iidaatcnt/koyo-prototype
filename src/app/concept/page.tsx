@@ -1,4 +1,4 @@
-// src/app/concept/page.tsx - 元サイト準拠版
+// src/app/concept/page.tsx - 元サイト準拠版（画像対応）
 import Image from 'next/image';
 
 export const metadata = {
@@ -70,8 +70,13 @@ export default function ConceptPage() {
                   温かい人々との出会いが、私たちの原動力となっています。
                 </p>
               </div>
-              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">山形の風景画像エリア</p>
+              <div className="lg:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/img_conp01.jpg"
+                  alt="山形の地に誇りを持つ"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -93,8 +98,13 @@ export default function ConceptPage() {
                   隠れた宝物を見つけ出すことに情熱を注いでいます。
                 </p>
               </div>
-              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">発見の風景画像エリア</p>
+              <div className="lg:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/img_conp02.jpg"
+                  alt="山形の魅力を日々探す"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -116,8 +126,13 @@ export default function ConceptPage() {
                   それを現代に活かす方法を常に模索しています。
                 </p>
               </div>
-              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">学びの風景画像エリア</p>
+              <div className="lg:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/img_conp03.jpg"
+                  alt="最高の山形を学び続ける"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -139,8 +154,13 @@ export default function ConceptPage() {
                   古き良きものと新しい感性の融合を目指しています。
                 </p>
               </div>
-              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">創造の風景画像エリア</p>
+              <div className="lg:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/img_conp04.jpg"
+                  alt="農村文化を現代的にデザインする"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -162,8 +182,13 @@ export default function ConceptPage() {
                   山形の素晴らしさを全身で感じていただけるよう努めています。
                 </p>
               </div>
-              <div className="lg:w-1/2 h-64 bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">体験の風景画像エリア</p>
+              <div className="lg:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/img_conp05.jpg"
+                  alt="山形の物語を演出し、体験してもらう"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
