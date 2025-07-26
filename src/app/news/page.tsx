@@ -1,4 +1,4 @@
-// src/app/news/page.tsx (安全なmicroCMS連携版)
+// src/app/news/page.tsx (ヘッダー画像付き版)
 import { getNewsList } from '@/lib/microcms';
 import Link from 'next/link';
 
@@ -33,15 +33,20 @@ export default async function NewsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* ページヘッダー */}
-      <section className="bg-white border-b">
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">新着情報</h1>
-            <p className="text-lg text-gray-600">
-              古窯グループの最新情報をお届けします
-            </p>
-          </div>
+      {/* ページヘッダー - 背景画像付き */}
+      <section 
+        className="relative h-80 flex items-center justify-center text-white"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/news_main.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="text-center max-w-4xl px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">新着情報</h1>
+          <p className="text-lg md:text-xl font-light">
+            古窯グループの最新情報をお届けします
+          </p>
         </div>
       </section>
 

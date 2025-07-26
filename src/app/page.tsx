@@ -1,4 +1,4 @@
-// src/app/page.tsx (完全版)
+// src/app/page.tsx (グループ施設セクション追加版)
 import { getNewsList } from '@/lib/microcms';
 import Link from 'next/link';
 
@@ -115,8 +115,150 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 新着情報セクション */}
+      {/* グループ施設セクション */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            グループ施設
+          </h2>
+          <p className="text-center text-gray-600 mb-16">Group Facility</p>
+
+          {/* 泊まる施設 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">泊まる</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="日本の宿 古窯" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">日本の宿 古窯</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    40年連続トップ10受賞の老舗旅館。蔵王連峰を望む展望露天風呂と
+                    山形の食材を活かした会席料理が自慢です。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県上山市 | かみのやま温泉
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="おやど 森の音" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">おやど 森の音</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    森に囲まれた静寂な宿。自然の音色に包まれながら、
+                    心身ともにリフレッシュできる空間をご提供します。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県上山市 | かみのやま温泉
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="古窯別館" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">古窯別館</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    モダンと伝統が融合した新しいスタイルの宿。
+                    若い世代にも愛される上質な和のおもてなし。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県上山市 | かみのやま温泉
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="山形グランドホテル" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">山形グランドホテル</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    山形市内中心部に位置するシティホテル。
+                    ビジネスにも観光にも便利な立地です。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県山形市 | 市内中心部
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 味わう施設 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg">味わう</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="レストラン古窯" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">レストラン古窯</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    山形の季節の食材を活かした創作料理を、洗練された空間で。
+                    特別な日のお食事にもおすすめです。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県上山市 | 創作和食・会席料理
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 体験する施設 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <span className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg">体験する</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                  alt="楽焼き体験工房" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">楽焼き体験工房</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    1300年前の須恵器の窯跡がある古窯で、伝統の楽焼き体験。
+                    世界に一つだけの作品を作りませんか。
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    山形県上山市 | 伝統工芸体験
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 新着情報セクション */}
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -197,7 +339,7 @@ export default async function Home() {
       </section>
 
       {/* 採用情報セクション */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             共に働く仲間を募集しています
