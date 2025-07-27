@@ -1,5 +1,5 @@
 // =====================================
-// 1. src/components/HeroSlider.tsx
+// src/components/HeroSlider.tsx - 古窯グループ実画像版
 // =====================================
 'use client'
 
@@ -10,31 +10,31 @@ const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoplay, setIsAutoplay] = useState(true)
 
-  // スライド画像データ（仮画像4枚）
+  // スライド画像データ（古窯グループの実画像使用）
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1920&q=80',
-      title: '温泉でのんびり',
-      subtitle: '心も体もリフレッシュ'
+      image: '/images/hero-1.png',
+      title: '日本の宿古窯',
+      subtitle: 'プロが選ぶ旅館百選TOP10の温泉宿'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1617294057486-ba3e3b02c07e?auto=format&fit=crop&w=1920&q=80',
-      title: '山形の味覚',
-      subtitle: '地元の新鮮な食材'
+      image: '/images/hero-2.png',
+      title: 'あつみ温泉萬国屋',
+      subtitle: '350年の歴史を誇る老舗旅館'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1920&q=80',
-      title: '伝統のおもてなし',
-      subtitle: '心からのサービス'
+      image: '/images/hero-3.png',
+      title: '山形の味覚',
+      subtitle: '地元の新鮮な食材と伝統の味'
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80',
-      title: '美しい山形の自然',
-      subtitle: '四季折々の風景'
+      image: '/images/hero-4.png',
+      title: '山形の体験',
+      subtitle: '四季折々の自然と文化を満喫'
     }
   ]
 
@@ -88,6 +88,7 @@ const HeroSlider = () => {
               className="object-cover"
               priority={index === 0}
               sizes="100vw"
+              quality={90}
             />
             {/* オーバーレイ */}
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -125,9 +126,9 @@ const HeroSlider = () => {
             自然とお客様の感動や喜びに変わっていく。
           </p>
 
-          {/* 現在のスライド情報（小さく表示） */}
+          {/* 現在のスライド情報（古窯グループの施設名表示） */}
           <div className="mt-8 sm:mt-12">
-            <p className="text-sm sm:text-base opacity-80">
+            <p className="text-sm sm:text-base opacity-90 bg-black bg-opacity-30 inline-block px-4 py-2 rounded-lg">
               {slides[currentSlide].title} - {slides[currentSlide].subtitle}
             </p>
           </div>
@@ -143,10 +144,10 @@ const HeroSlider = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide
-                  ? 'bg-white scale-110'
+                  ? 'bg-yellow-400 scale-110'
                   : 'bg-white bg-opacity-50 hover:bg-opacity-75'
               }`}
-              aria-label={`スライド ${index + 1} へ移動`}
+              aria-label={`スライド ${index + 1}: ${slides[index].title}へ移動`}
             />
           ))}
         </div>
@@ -157,7 +158,7 @@ const HeroSlider = () => {
         {/* 前へボタン */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
           aria-label="前のスライド"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,7 +169,7 @@ const HeroSlider = () => {
         {/* 次へボタン */}
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
           aria-label="次のスライド"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +180,7 @@ const HeroSlider = () => {
 
       {/* 自動再生インジケーター（開発時のみ表示） */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="absolute top-4 right-4 z-20 bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm">
+        <div className="absolute top-4 right-4 z-20 bg-black bg-opacity-70 text-white px-3 py-1 rounded text-sm">
           自動再生: {isAutoplay ? 'ON' : 'OFF'} | スライド: {currentSlide + 1}/{slides.length}
         </div>
       )}
